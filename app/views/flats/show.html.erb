@@ -1,0 +1,56 @@
+  <div style="background-image: url('<%= @flat.picture_url %>'); background-size: cover; background-position: center; height: 300px">
+  </div>
+<div class="container">
+  <div class="row">
+    <div class="col col-md-8">
+
+      <div class="flat-info">
+        <h1><%= @flat.name %></h1>
+        <p><%= @flat.address %></p>
+      </div>
+
+      <div class="description">
+          <h1>A bit more about this flat</h1>
+          <p><%= @flat.description %></p>
+
+          <div class="" style="background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=<%= @flat.address.gsub(' ','+') %>&zoom=13&size=600x300'); height: 300px"></div>
+      </div>
+
+      <div class="flat-show-details">
+        <h1>Details</h1>
+        <div class="details">
+          <p><i class="fas fa-users"></i> <%= @flat.number_of_guests %></p>
+          <p><i class="fas fa-euro-sign"> </i><%= @flat.price_per_night %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col col-md-4 flat-booking"">
+      <form>
+      <h4>Book this place</h3>
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1">From:</span>
+          <input type="text" class="form-control">
+        </div>
+
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1">To:</span>
+          <input type="text" class="form-control">
+        </div>
+
+        <input type="submit" value="Book" class="btn btn-success">
+
+      </form>
+      <div class="share">
+        <p>Share</p>
+        <div class="icons">
+          <p><i class="fab fa-facebook-square"></i></p>
+          <p><i class="fab fa-twitter-square"></i></p>
+          <p><i class="fab fa-pinterest-square"></i></p>
+          <p><i class="fas fa-envelope-square"></i></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
